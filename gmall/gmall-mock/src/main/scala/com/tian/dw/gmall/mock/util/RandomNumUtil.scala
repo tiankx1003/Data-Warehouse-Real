@@ -1,4 +1,4 @@
-package com.tian.gmall.mock.util
+package com.tian.dw.gmall.mock.util
 
 import scala.collection.mutable
 import scala.util.Random

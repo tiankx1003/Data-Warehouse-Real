@@ -1,9 +1,9 @@
-package com.tian.gmall.mock
-
+package com.tian.dw.gmall.mock
 
 import java.util.Date
 
 import com.alibaba.fastjson.{JSON, JSONObject}
+import com.tian.dw.gmall.mock.util.{LogUploader, RandomNumUtil, RandomOptions}
 import com.tian.gmall.mock.util.{LogUploader, RandomNumUtil, RandomOptions}
 
 /**
