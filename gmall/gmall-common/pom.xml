@@ -10,6 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>gmall-common</artifactId>
+    <description>通用模块，定义一些公共的的代码</description>
+
     <dependencies>
         <dependency>
             <groupId>com.alibaba</groupId>
