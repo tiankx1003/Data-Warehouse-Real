@@ -5,7 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class GmallLoggerApplication {
+/*
 
+java -cp ./gmall-logger-0.0.1-SNAPSHOT.jar:/opt/module/scala-2.11.8/lib/scala-library org.springframework.boot.loader.JarLauncher
+
+ */
     public static void main(String[] args) {
         SpringApplication.run(GmallLoggerApplication.class, args);
     }

@@ -1,9 +1,11 @@
 package com.tian.dw.gmalllogger.controller
 
 import com.alibaba.fastjson.{JSON, JSONObject}
+import com.tian.gmall.common.ConstantUtil
 import org.slf4j.{Logger, LoggerFactory}
 import org.springframework.web.bind.annotation.{PostMapping, RequestParam, RestController}
-
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.kafka.core.KafkaTemplate
 
 /**
  * @author tian
@@ -19,6 +21,7 @@ class LoggerController {
         val logObj = JSON.parseObject(log)
         val logWithTS = addTS(logObj)
         saveLog2File(logWithTS)
+        send2Kafka(logWithTS)
         "success"
     }
 
@@ -42,5 +45,23 @@ class LoggerController {
      */
     def saveLog2File(logWithTS: String) = {
         logger.info(logWithTS)
+    }
+
+
+    // 使用注入的方式来实例化 KafkaTemplate. Spring boot 会自动完成// 使用注入的方式来实例化 KafkaTemplate. Spring boot 会自动完成
+    @Autowired
+    var kafkaTemplate: KafkaTemplate[String, String] = _
+
+    /**
+     * 发送日志到 kafka
+     *
+     * @param logWithTS
+     */
+    private def send2Kafka(logWithTS: String): Unit = {
+        val logObj = JSON.parseObject(logWithTS)
+        val logType = logObj.getString("logType")
+        var topicName = ConstantUtil.STARTUP_TOPIC
+        if ("event" == logType) topicName = ConstantUtil.EVENT_TOPIC // TODO: event 消费不到数据
+        kafkaTemplate.send(topicName, logObj.toJSONString)
     }
 }

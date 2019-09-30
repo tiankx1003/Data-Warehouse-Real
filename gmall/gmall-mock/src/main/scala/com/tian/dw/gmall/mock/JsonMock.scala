@@ -90,8 +90,8 @@ object JsonMock {
 
     // 模拟出来一条事件日志  参数: json 格式的启动日志
     def initOneEventLog(startupLogJson: String) = {
-        /*`
-        logType` string   COMMENT '日志类型',
+        /*
+        `logType` string   COMMENT '日志类型',
         `mid` string COMMENT '设备唯一标识',
         `uid` string COMMENT '用户标识',
         `os` string COMMENT '操作系统',
