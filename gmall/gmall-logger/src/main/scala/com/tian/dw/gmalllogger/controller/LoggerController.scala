@@ -49,8 +49,7 @@ class LoggerController {
 
 
     // 使用注入的方式来实例化 KafkaTemplate. Spring boot 会自动完成// 使用注入的方式来实例化 KafkaTemplate. Spring boot 会自动完成
-    @Autowired
-    var kafkaTemplate: KafkaTemplate[String, String] = _
+    @Autowired var kafkaTemplate: KafkaTemplate[String, String] = _
 
     /**
      * 发送日志到 kafka
