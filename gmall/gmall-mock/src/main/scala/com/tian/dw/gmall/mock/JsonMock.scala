@@ -4,7 +4,6 @@ import java.util.Date
 
 import com.alibaba.fastjson.{JSON, JSONObject}
 import com.tian.dw.gmall.mock.util.{LogUploader, RandomNumUtil, RandomOptions}
-import com.tian.gmall.mock.util.{LogUploader, RandomNumUtil, RandomOptions}
 
 /**
  * 生成模拟数据日志
