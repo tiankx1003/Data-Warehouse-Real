@@ -10,7 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>gmall-mock</artifactId>
-    <description>用于生成模拟数据</description>
 
     <dependencies>
         <dependency>

@@ -60,7 +60,7 @@ class LoggerController {
         val logObj = JSON.parseObject(logWithTS)
         val logType = logObj.getString("logType")
         var topicName = ConstantUtil.STARTUP_TOPIC
-        if ("event" == logType) topicName = ConstantUtil.EVENT_TOPIC // TODO: event 消费不到数据
+        if ("event" == logType) topicName = ConstantUtil.EVENT_TOPIC
         kafkaTemplate.send(topicName, logObj.toJSONString)
     }
 }
