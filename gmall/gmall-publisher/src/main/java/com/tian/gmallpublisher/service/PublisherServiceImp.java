@@ -1,8 +1,8 @@
 package com.tian.gmallpublisher.service;
 
-import com.google.inject.internal.cglib.core.$LocalVariablesSorter;
 import com.tian.gmallpublisher.mapper.DauMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -13,6 +13,7 @@ import java.util.Map;
  * @version 1.0.0
  * @date 2019/10/9 10:41
  */
+@Service
 public class PublisherServiceImp implements PublisherService {
     @Autowired
     public DauMapper dauMapper; //无法new对象，使用自动注入
