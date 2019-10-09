@@ -23,19 +23,17 @@ import org.apache.spark.broadcast.Broadcast
  */
 object DauApp {
     def main(args: Array[String]): Unit = {
-        val conf: SparkConf = new SparkConf().setMaster("local[*]").setAppName("DauApp")
-        val ssc: StreamingContext = new StreamingContext(conf, Seconds(5))
-        val sourceStream: InputDStream[(String, String)] =
-            MyKafkaUtil.getKafkaStream(ssc, ConstantUtil.STARTUP_TOPIC)
+        val conf: SparkConf = new SparkConf().setAppName("DauApp").setMaster("local[2]")
+        val ssc: StreamingContext = new StreamingContext(conf, Seconds(3))
+        val sourceDStream: InputDStream[(String, String)] = MyKafkaUtil.getKafkaStream(ssc, ConstantUtil.STARTUP_TOPIC)
 
         // 1. 调整数据结构并封装数据
-        val startupLogDSteam: DStream[StartupLog] = sourceStream.map {
+        val startupLogDSteam: DStream[StartupLog] = sourceDStream.map {
             case (_, value) =>
                 val log: StartupLog = JSON.parseObject(value, classOf[StartupLog])
-                log.logDate = new SimpleDateFormat("yyyy-MM-dd").format(log)
+                log.logDate = new SimpleDateFormat("yyyy-MM-dd").format(log.ts)
                 log.logHour = new SimpleDateFormat("HH").format(log.ts)
                 log
-
         }
 
         // 2. 保存到 redis

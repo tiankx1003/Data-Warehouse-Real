@@ -2,8 +2,11 @@
   <dictionary name="tian">
     <words>
       <w>appid</w>
+      <w>applog</w>
+      <w>bigdata</w>
       <w>djava</w>
       <w>gmall</w>
+      <w>gmalllogger</w>
       <w>gmallpublisher</w>
       <w>jedis</w>
       <w>logdate</w>
