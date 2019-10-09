@@ -11,6 +11,7 @@
       <w>jedis</w>
       <w>logdate</w>
       <w>loghour</w>
+      <w>rowdata</w>
       <w>tian</w>
     </words>
   </dictionary>

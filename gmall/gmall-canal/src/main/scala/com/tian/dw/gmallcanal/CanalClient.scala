@@ -31,7 +31,7 @@ object CanalClient {
             // 5. 个消息对应多行数据发生了变化, 一个 entry 表示一条 sql 语句的执行
             val entries: java.util.List[CanalEntry.Entry] = msg.getEntries
             import scala.collection.JavaConversions._
-            if (entries.size() > 0) {
+            if (entries != null && !entries.isEmpty) { // if(entries.size() > 0)
                 // 6. 遍历每行数据
                 for (entry <- entries) {
                     // 7. EntryType.ROWDATA 只对这样的 EntryType 做处理
@@ -46,7 +46,7 @@ object CanalClient {
 
             } else {
                 println("没有抓取到数据...., 2s 之后重新抓取")
-                Thread.sleep(2000)
+                Thread.sleep(2000) //这个实时最好比structured streaming的周期短一些
             }
         }
 
