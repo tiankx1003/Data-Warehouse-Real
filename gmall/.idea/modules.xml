@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/gmall.iml" filepath="$PROJECT_DIR$/gmall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gmall-canal/gmall-canal.iml" filepath="$PROJECT_DIR$/gmall-canal/gmall-canal.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-chart/gmall-chart.iml" filepath="$PROJECT_DIR$/gmall-chart/gmall-chart.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-common/gmall-common.iml" filepath="$PROJECT_DIR$/gmall-common/gmall-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/gmall-logger/gmall-logger.iml" filepath="$PROJECT_DIR$/gmall-logger/gmall-logger.iml" />

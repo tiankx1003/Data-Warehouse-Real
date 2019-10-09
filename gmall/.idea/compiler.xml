@@ -12,10 +12,12 @@
         <module name="gmall-realtime" />
         <module name="gmall-publisher" />
         <module name="gmall-logger" />
+        <module name="gmall-canal" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gmall" target="1.8" />
+      <module name="gmall-canal" target="1.8" />
       <module name="gmall-chart" target="1.8" />
       <module name="gmall-common" target="1.8" />
       <module name="gmall-logger" target="1.8" />
