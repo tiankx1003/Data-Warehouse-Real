@@ -13,6 +13,7 @@
         <module>gmall-mock</module>
         <module>gmall-logger</module>
         <module>gmall-realtime</module>
+        <module>gmall-publisher</module>
     </modules>
     <!-- 由于子模块会用到 springboot, 而 springboot 必须使用这个父项目: spring-boot-starter-parent,
      所以让我们的父项目使用spring-boot-starter-parent,

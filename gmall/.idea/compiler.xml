@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gmall-realtime" />
+        <module name="gmall-publisher" />
         <module name="gmall-mock" />
         <module name="gmall-common" />
+        <module name="gmall-realtime" />
         <module name="gmall-logger" />
       </profile>
     </annotationProcessing>
@@ -17,8 +18,14 @@
       <module name="gmall-common" target="1.8" />
       <module name="gmall-logger" target="1.8" />
       <module name="gmall-mock" target="1.8" />
+      <module name="gmall-publisher" target="1.8" />
       <module name="gmall-realltime" target="1.8" />
       <module name="gmall-realtime" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gmall-publisher" options="" />
+    </option>
   </component>
 </project>
