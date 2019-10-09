@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gmall-publisher" />
         <module name="gmall-mock" />
         <module name="gmall-common" />
+        <module name="gmall-chart" />
         <module name="gmall-realtime" />
+        <module name="gmall-publisher" />
         <module name="gmall-logger" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="gmall" target="1.8" />
+      <module name="gmall-chart" target="1.8" />
       <module name="gmall-common" target="1.8" />
       <module name="gmall-logger" target="1.8" />
       <module name="gmall-mock" target="1.8" />
