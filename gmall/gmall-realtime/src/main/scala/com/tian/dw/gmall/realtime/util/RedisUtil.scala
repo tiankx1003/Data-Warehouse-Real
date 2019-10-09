@@ -9,9 +9,9 @@ import redis.clients.jedis.{Jedis, JedisPool, JedisPoolConfig}
  *          2019/10/8 9:04
  */
 object RedisUtil {
-  val host = PropertiesUtil.getProperty("redis.host")
-  val port = PropertiesUtil.getProperty("redis.port").toInt
-  private val jedisPoolConfig = new JedisPoolConfig()
+  val host: String = PropertiesUtil.getProperty("redis.host")
+  val port: Int = PropertiesUtil.getProperty("redis.port").toInt
+  private val jedisPoolConfig: JedisPoolConfig = new JedisPoolConfig()
   jedisPoolConfig.setMaxTotal(100) //最大连接数
   jedisPoolConfig.setMaxIdle(20) //最大空闲
   jedisPoolConfig.setMinIdle(20) //最小空闲

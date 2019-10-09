@@ -12,15 +12,10 @@ import java.util.Properties
  */
 object PropertiesUtil {
     private val is: InputStream = ClassLoader.getSystemResourceAsStream("config.properties")
-    private val properties = new Properties()
+    private val properties: Properties = new Properties()
     properties.load(is)
 
     def getProperty(propertyName: String): String = properties.getProperty(propertyName)
-
-    //TODO 另一种写法
-    def getProperty(propFile:String,propName:String) = {
-
-    }
 
     def main(args: Array[String]): Unit = {
         println(getProperty("kafka.broker.list"))
