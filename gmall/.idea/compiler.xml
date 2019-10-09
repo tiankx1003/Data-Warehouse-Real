@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gmall-realltime" />
+        <module name="gmall-realtime" />
         <module name="gmall-mock" />
         <module name="gmall-common" />
         <module name="gmall-logger" />
@@ -18,6 +18,7 @@
       <module name="gmall-logger" target="1.8" />
       <module name="gmall-mock" target="1.8" />
       <module name="gmall-realltime" target="1.8" />
+      <module name="gmall-realtime" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

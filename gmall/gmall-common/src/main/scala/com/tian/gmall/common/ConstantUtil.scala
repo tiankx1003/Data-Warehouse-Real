@@ -8,6 +8,6 @@ object ConstantUtil {
     val STARTUP_TOPIC: String = "startup"
     val EVENT_TOPIC: String = "event"
 
-    val REDIS_DAU_KEY = null //TODO　添加常量值
+    val REDIS_DAU_KEY = "" //TODO　添加常量值
 
 }
