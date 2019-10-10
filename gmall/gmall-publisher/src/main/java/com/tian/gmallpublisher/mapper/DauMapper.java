@@ -1,8 +1,5 @@
 package com.tian.gmallpublisher.mapper;
 
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
 import java.util.List;
 import java.util.Map;
 
@@ -18,7 +15,7 @@ public interface DauMapper {
      * @param date 指定的日期
      * @return 日活数
      */
-    Long getDau(String date);
+    Long getDauTotal(String date);
 
     /**
      * 小时日活
@@ -26,9 +23,5 @@ public interface DauMapper {
      * @param date 指定的日期
      * @return 日活数
      */
-    List<Map> getHourDau(String date);
-
-    long getDauTotal(String date);
-
     List<Map> getDauHour(String date);
 }

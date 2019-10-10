@@ -2,7 +2,6 @@ package com.tian.gmallpublisher.service;
 
 import com.tian.gmallpublisher.mapper.DauMapper;
 import com.tian.gmallpublisher.mapper.OrderMapper;
-import org.apache.commons.collections.map.HashedMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,26 +17,9 @@ import java.util.Map;
  */
 @Service
 public class PublisherServiceImp implements PublisherService {
+    /*自动注入 DauMapper 对象*/
     @Autowired
-    public DauMapper dauMapper; //无法new对象，使用自动注入
-
-    @Override
-    public long getDau(String date) {
-        return dauMapper.getDau(date);
-    }
-
-    @Override
-    public Map<String, Long> getHourDau(String date) {
-        List<Map> list = dauMapper.getHourDau(date);
-        HashMap<String, Long> resultMap = new HashMap<>();
-        for (Map map : list) {
-            String hour = (String) map.get("LOGHOUR");
-            Long count = (Long) map.get("COUNT");
-            resultMap.put(hour, count);
-        }
-        return resultMap;
-    }
-
+    DauMapper dauMapper;
 
 
     @Override
@@ -46,12 +28,12 @@ public class PublisherServiceImp implements PublisherService {
     }
 
     @Override
-    public Map getDauHour(String date) {
+    public Map<String, Long> getDauHour(String date) {
         List<Map> dauHourList = dauMapper.getDauHour(date);
 
-        Map dauHourMap = new HashedMap();
+        Map<String, Long> dauHourMap = new HashMap<>();
         for (Map map : dauHourList) {
-            String hour = (String)map.get("LOGHOUR");
+            String hour = (String) map.get("LOGHOUR");
             Long count = (Long) map.get("COUNT");
             dauHourMap.put(hour, count);
         }
@@ -62,23 +44,26 @@ public class PublisherServiceImp implements PublisherService {
     // 以下为新增
     @Autowired
     OrderMapper orderMapper;
+
     @Override
     public double getOrderAmountTotal(String date) {
-        return orderMapper.getOrderAmountTotal(date);
+        Double totalAmount = orderMapper.getOrderAmountTotal(date);
+        return totalAmount == null ? 0 : totalAmount; //防止空指针
     }
 
     @Override
-    public Map getOrderAmountHour(String date) {
+    public Map<String,BigDecimal> getOrderAmountHour(String date) {
         List<Map> orderAmountHour = orderMapper.getOrderAmountHour(date);
 
         Map<String, BigDecimal> orderHourAmountMap = new HashMap<>();
         for (Map map : orderAmountHour) {
             String hour = (String) map.get("CREATE_HOUR");
-            BigDecimal amount = (BigDecimal)map.get("SUM");
+            BigDecimal amount = (BigDecimal) map.get("SUM");
             orderHourAmountMap.put(hour, amount);
         }
 
         return orderHourAmountMap;
     }
+
 
 }

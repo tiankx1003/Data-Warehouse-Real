@@ -3,12 +3,12 @@
 <!--namespace 对应前面定义的接口-->
 <mapper namespace="com.tian.gmallpublisher.mapper.DauMapper">
     <!--对应前面接口中的方法,  标签内写响应的查询语句, 查询的接口会赋值给这个方法的返回值-->
-    <select id="getDau" resultType="java.lang.Long">
+    <select id="getDauTotal" resultType="java.lang.Long">
         select count(1) from gmall_dau where logdate=#{date}
     </select>
 
     <!--分时明细-->
-    <select id="getHourDau" resultMap="dauHourList">
+    <select id="getDauHour" resultMap="dauHourList">
         select loghour, count(1) count from gmall_dau where logdate=#{date} group by loghour
     </select>
     <resultMap id="dauHourList" type="java.util.Map" autoMapping="true"></resultMap>
