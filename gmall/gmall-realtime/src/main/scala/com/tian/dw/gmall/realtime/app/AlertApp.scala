@@ -64,12 +64,16 @@ object AlertApp {
                     })
                 }
                 //2. 组合成元组  (是否预警, 预警信息)
-                (!isBrowserProduct && uids.size() >= 3, AlertInfo(mid, uids, itemIds, eventIds, System.currentTimeMillis()))
+                (
+                    !isBrowserProduct && uids.size() >= 3,
+                    AlertInfo(mid, uids, itemIds, eventIds, System.currentTimeMillis())
+                )
         }
         // 5. 过滤掉不需要报警的信息
         val filteredDStream: DStream[AlertInfo] = checkCouponAlertDStream.filter(_._1).map(_._2)
         // 6. 把预警信息写入到 ES
-
+        checkCouponAlertDStream.print
+        filteredDStream.print //打印测试
         ssc.start()
         ssc.awaitTermination()
 
