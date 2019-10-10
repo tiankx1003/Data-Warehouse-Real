@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--namespace 对应前面定义的接口-->
+<mapper namespace="com.tian.gmallpublisher.mapper.OrderMapper">
+    <!--对应前面接口中的方法,  标签内写响应的查询语句, 查询的接口会赋值给这个方法的返回值-->
+    <select id="getOrderAmountTotal" resultType="java.lang.Double">
+        select sum(total_amount) sum from gmall_order_info where create_date=#{date}
+    </select>
+
+    <!--分时明细-->
+    <select id="getOrderAmountHour" resultMap="orderAmountHourList">
+        select create_hour, sum(total_amount) sum from gmall_order_info  where create_date=#{date} group by create_hour
+    </select>
+    <resultMap id="orderAmountHourList" type="java.util.Map" autoMapping="true">
+
+    </resultMap>
+
+</mapper>

@@ -8,4 +8,5 @@ object ConstantUtil {
     val STARTUP_TOPIC: String = "startup"
     val EVENT_TOPIC: String = "event"
     val TOPIC_ORDER: String = "order"
+    val ORDER_TABLE_NAME: String = "GMALL_ORDER_INFO"
 }

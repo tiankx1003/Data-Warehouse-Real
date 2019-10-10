@@ -27,4 +27,8 @@ public interface DauMapper {
      * @return 日活数
      */
     List<Map> getHourDau(String date);
+
+    long getDauTotal(String date);
+
+    List<Map> getDauHour(String date);
 }

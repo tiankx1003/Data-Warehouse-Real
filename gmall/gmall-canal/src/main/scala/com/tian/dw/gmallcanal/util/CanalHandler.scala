@@ -37,7 +37,7 @@ object CanalHandler {
             }
             // 4. 发送到 Kafka
             println(obj.toJSONString) //输出验证
-            // MyKafkaSender.sendToKafka(ConstantUtil.TOPIC_ORDER, obj.toJSONString)
+            MyKafkaSender.sendToKafka(ConstantUtil.TOPIC_ORDER, obj.toJSONString)
         }
     }
 }
