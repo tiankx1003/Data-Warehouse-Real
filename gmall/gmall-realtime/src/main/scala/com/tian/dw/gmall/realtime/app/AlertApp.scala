@@ -23,7 +23,7 @@ object AlertApp {
     def main(args: Array[String]): Unit = {
         // 1. 从kafka消费数据(事件日志)
         val conf: SparkConf = new SparkConf().setAppName("DAUApp").setMaster("local[1]")
-        val ssc = new StreamingContext(conf, Seconds(5))
+        val ssc: StreamingContext = new StreamingContext(conf, Seconds(5))
         val sourceDStream: InputDStream[(String, String)] = MyKafkaUtil.getKafkaStream(ssc, ConstantUtil.EVENT_TOPIC)
 
         // 2. 添加窗口, 调整数据结构
@@ -31,8 +31,8 @@ object AlertApp {
             .window(Seconds(5 * 60), Seconds(5))
             .map {
                 case (_, jsonString) =>
-                    val log = JSON.parseObject(jsonString, classOf[EventLog])
-                    val date = new Date(log.ts)
+                    val log: EventLog = JSON.parseObject(jsonString, classOf[EventLog])
+                    val date: Date = new Date(log.ts)
                     log.logDate = new SimpleDateFormat("yyyy-MM-dd").format(date)
                     log.logHour = new SimpleDateFormat("HH").format(date)
                     (log.mid, log)
