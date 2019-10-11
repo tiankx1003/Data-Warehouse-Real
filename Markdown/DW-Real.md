@@ -11,6 +11,7 @@
 
 # 一、服务器环境说明
 
+CentOS 6.8
 JDK 1.8
 Scala 2.11.8
 Hadoop 2.7.2
