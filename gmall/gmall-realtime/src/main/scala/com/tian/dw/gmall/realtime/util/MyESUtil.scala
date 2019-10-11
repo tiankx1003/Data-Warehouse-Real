@@ -9,8 +9,8 @@ import io.searchbox.core.{Bulk, Index}
  * @version 1.0.0
  */
 object MyESUtil {
-    val esUrl = "http://hadoop102:9200"
-    val factory = new JestClientFactory
+    val esUrl: String = "http://hadoop102:9200"
+    val factory: JestClientFactory = new JestClientFactory
     val conf: HttpClientConfig = new HttpClientConfig.Builder(esUrl)
         .multiThreaded(true)
         .maxTotalConnection(20)
@@ -20,10 +20,10 @@ object MyESUtil {
     factory.setHttpClientConfig(conf)
 
     // 获取客户端
-    def getESClient = factory.getObject
+    def getESClient: JestClient = factory.getObject
 
     // 插入单条数据
-    def insertSingle(indexName: String, source: Any) = {
+    def insertSingle(indexName: String, source: Any): Unit = {
         val client: JestClient = getESClient
         val index: Index = new Index.Builder(source)
             .`type`("_doc")
@@ -38,7 +38,7 @@ object MyESUtil {
         if (sources.isEmpty) return
 
         val client: JestClient = getESClient
-        val bulkBuilder = new Bulk.Builder()
+        val bulkBuilder: Bulk.Builder = new Bulk.Builder()
             .defaultIndex(indexName)
             .defaultType("_doc")
         sources.foreach { // 把所有的source变成action添加buck中
@@ -62,12 +62,12 @@ object MyESUtil {
      *
      * @param client
      */
-    def closeClient(client: JestClient) = {
+    def closeClient(client: JestClient): Unit = {
         if (client != null) {
             try {
                 client.shutdownClient()
             } catch {
-                case e => e.printStackTrace()
+                case e: Throwable => e.printStackTrace()
             }
         }
     }
