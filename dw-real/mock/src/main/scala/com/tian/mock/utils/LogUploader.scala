@@ -1,4 +1,4 @@
-package com.tian.dw.gmall.mock.util
+package com.tian.mock.utils
 
 import java.io.OutputStream
 import java.net.{HttpURLConnection, URL}

@@ -2,31 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b24d6d6-9888-4043-9f8d-96a06b642bfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/src/main/java/com/tian/logger/LoggerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logger/src/test/java/com/tian/logger/LoggerApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mock/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/realtime/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Markdown/Build-Env.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Markdown/Build-Env.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Markdown/DW-Real.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Markdown/DW-Real.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gmall/.idea/dictionaries/tian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gmall/.idea/dictionaries/tian.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/tian.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/scala/com/tian/common/ConstantUtil.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mock/src/main/scala/com/tian/mock/JsonMock.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mock/src/main/scala/com/tian/mock/utils/LogUploader.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mock/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mock/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +19,20 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -46,6 +42,9 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -61,12 +60,22 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mock/src/main/scala/com/tian/mock/utils" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2229885" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="show.run.dashboard.notification" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tian.mock.utils" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Git\Data-WareHouse-Real\dw-real\mock\src\main\scala\com\tian\mock\utils" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -106,7 +115,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570795752852</updated>
-      <workItem from="1570795754205" duration="687000" />
+      <workItem from="1570795754205" duration="1714000" />
+      <workItem from="1570797522319" duration="721000" />
     </task>
     <servers />
   </component>
@@ -118,7 +128,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
