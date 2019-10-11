@@ -77,7 +77,8 @@ object AlertApp {
         // 6. 把预警信息写入到 ES
         // 6.1 对同一个mid, 每分钟最多预警一次. 所以需要做去重处理. 去重使用es来实现去重: 当id相同的时候, 后面的会自动覆盖前面的
         // id: mid_分钟
-        val alertInfoWithIdDStream = filteredDStream.map(alertInfo => (alertInfo.mid + "_" + alertInfo.ts / 1000 / 60, alertInfo))
+        val alertInfoWithIdDStream: DStream[(String, AlertInfo)] = filteredDStream
+            .map(alertInfo => (alertInfo.mid + "_" + alertInfo.ts / 1000 / 60, alertInfo))
 
         // 6.2 写入到es中
         alertInfoWithIdDStream.foreachRDD(rdd => {

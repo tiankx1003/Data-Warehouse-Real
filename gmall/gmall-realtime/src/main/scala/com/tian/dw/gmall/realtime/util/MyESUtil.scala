@@ -47,21 +47,13 @@ object MyESUtil {
             // 其他类型 没有id, 将来省的数据会自动生成默认id
             case data => bulkBuilder.addAction(new Index.Builder(data).build())
         }
+        // val bulk: Bulk = new Bulk.Builder().build
+        // client.execute(bulk)
         client.execute(bulkBuilder.build())
         closeClient(client)
     }
 
-    def main(args: Array[String]): Unit = {
-        //        insertSingle("user", User("a", 20))
-        insertBulk("user", Iterator(User("aa", 20), User("bb", 30)))
-
-    }
-
-    /**
-     * 关闭客户端
-     *
-     * @param client
-     */
+    //关闭客户端
     def closeClient(client: JestClient): Unit = {
         if (client != null) {
             try {
@@ -72,5 +64,10 @@ object MyESUtil {
         }
     }
 
+    def main(args: Array[String]): Unit = { //运行测试效果
+        //        insertSingle("user", User("a", 20))
+        insertBulk("user", Iterator(User("aa", 20), User("bb", 30)))
+
+    }
 }
 case class User(name: String, age: Int)
