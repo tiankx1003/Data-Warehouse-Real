@@ -10,7 +10,6 @@ import java.util.Map;
  */
 public interface OrderMapper {
 
-    // TODO: 2019/10/10 数据类型使用double可能报错， 可使用Double替换，并判空防止空指针
     /**
      * 获取订单总的销售额
      *

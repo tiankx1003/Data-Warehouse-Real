@@ -7,7 +7,7 @@ import java.util.Date
 import com.alibaba.fastjson.JSON
 import com.tian.gmall.common.ConstantUtil
 import com.tian.dw.gmall.realtime.bean.{AlertInfo, EventLog}
-import com.tian.dw.gmall.realtime.util.MyKafkaUtil
+import com.tian.dw.gmall.realtime.util.{MyESUtil, MyKafkaUtil}
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.dstream.{DStream, InputDStream}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
@@ -71,9 +71,19 @@ object AlertApp {
         }
         // 5. 过滤掉不需要报警的信息
         val filteredDStream: DStream[AlertInfo] = checkCouponAlertDStream.filter(_._1).map(_._2)
-        // 6. 把预警信息写入到 ES
         checkCouponAlertDStream.print
         filteredDStream.print //打印测试
+
+        // 6. 把预警信息写入到 ES
+        // 6.1 对同一个mid, 每分钟最多预警一次. 所以需要做去重处理. 去重使用es来实现去重: 当id相同的时候, 后面的会自动覆盖前面的
+        // id: mid_分钟
+        val alertInfoWithIdDStream = filteredDStream.map(alertInfo => (alertInfo.mid + "_" + alertInfo.ts / 1000 / 60, alertInfo))
+
+        // 6.2 写入到es中
+        alertInfoWithIdDStream.foreachRDD(rdd => {
+            rdd.foreachPartition(it => MyESUtil.insertBulk("gmall_coupon_alert", it))
+        })
+
         ssc.start()
         ssc.awaitTermination()
 

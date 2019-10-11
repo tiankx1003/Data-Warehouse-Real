@@ -23,7 +23,6 @@ public class PublisherController {
     @Autowired
     PublisherService publisherService;
 
-    // TODO: 2019/10/10 当日期对应的时间点没有数据时会报错
     //http://localhost:8070/realtime-total?date=2019-10-10
     @GetMapping("realtime-total")
     public String getRealtimeTotal(@RequestParam("date") String date) {
