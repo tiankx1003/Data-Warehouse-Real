@@ -2,40 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b24d6d6-9888-4043-9f8d-96a06b642bfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/scala/com/tian/common/bean/User.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/scala/com/tian/common/utils/MyESUtil.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dw2es/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dw2es/src/main/resources/hive-site.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dw2es/src/main/scala/com/tian/dw2es/app/SaleDetailApp.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dw2es/src/main/scala/com/tian/dw2es/bean/SaleDetailDayCount.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/com/tian/publisher/PublisherApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/com/tian/publisher/controller/PublisherController1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/com/tian/publisher/service/PublisherService1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/bean/Opt.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/controller/PublisherController2.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/service/PublisherService2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Script/jpsall.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Script/jpsall.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Script/xcall.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Script/xcall.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Script/xsync.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Script/xsync.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/bean/SaleInfo.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/bean/Stat.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/tian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/tian.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/realtime/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/bean/Opt.scala" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/bean/Opt.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/service/PublisherService2Impl.scala" beforeDir="false" afterPath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/service/PublisherService2Impl.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,6 +83,9 @@
     <property name="show.run.dashboard.notification" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.tian.publisher.service" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.tian.mock.utils" />
     </key>
@@ -166,8 +141,16 @@
       <workItem from="1570795754205" duration="1714000" />
       <workItem from="1570797522319" duration="1431000" />
       <workItem from="1570840393183" duration="164000" />
-      <workItem from="1570880137998" duration="4886000" />
+      <workItem from="1570880137998" duration="6285000" />
     </task>
+    <task id="LOCAL-00001" summary="smart search">
+      <created>1570885285737</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570885285737</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,5 +168,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="smart search" />
+    <option name="LAST_COMMIT_MESSAGE" value="smart search" />
   </component>
 </project>
