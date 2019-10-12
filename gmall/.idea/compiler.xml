@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gmall-mock" />
+        <module name="gmall-dw2es" />
         <module name="gmall-common" />
         <module name="gmall-chart" />
         <module name="gmall-realtime" />
@@ -20,6 +21,7 @@
       <module name="gmall-canal" target="1.8" />
       <module name="gmall-chart" target="1.8" />
       <module name="gmall-common" target="1.8" />
+      <module name="gmall-dw2es" target="1.8" />
       <module name="gmall-logger" target="1.8" />
       <module name="gmall-mock" target="1.8" />
       <module name="gmall-publisher" target="1.8" />

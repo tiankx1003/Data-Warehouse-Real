@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b24d6d6-9888-4043-9f8d-96a06b642bfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/tian.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/scala/com/tian/common/ConstantUtil.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mock/src/main/scala/com/tian/mock/JsonMock.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mock/src/main/scala/com/tian/mock/utils/LogUploader.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mock/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mock/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +110,8 @@
       <option name="presentableId" value="Default" />
       <updated>1570795752852</updated>
       <workItem from="1570795754205" duration="1714000" />
-      <workItem from="1570797522319" duration="721000" />
+      <workItem from="1570797522319" duration="1431000" />
+      <workItem from="1570840393183" duration="164000" />
     </task>
     <servers />
   </component>

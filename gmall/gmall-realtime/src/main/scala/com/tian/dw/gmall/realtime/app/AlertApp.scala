@@ -7,7 +7,8 @@ import java.util.Date
 import com.alibaba.fastjson.JSON
 import com.tian.gmall.common.ConstantUtil
 import com.tian.dw.gmall.realtime.bean.{AlertInfo, EventLog}
-import com.tian.dw.gmall.realtime.util.{MyESUtil, MyKafkaUtil}
+import com.tian.dw.gmall.realtime.util.MyKafkaUtil
+import com.tian.gmall.common.util.MyESUtil
 import org.apache.spark.SparkConf
 import org.apache.spark.streaming.dstream.{DStream, InputDStream}
 import org.apache.spark.streaming.{Seconds, StreamingContext}

@@ -1,4 +1,5 @@
-package com.tian.dw.gmall.realtime.util
+package com.tian.gmall.common.util
+
 import io.searchbox.client.config.HttpClientConfig
 import io.searchbox.client.{JestClient, JestClientFactory}
 import io.searchbox.core.{Bulk, Index}
@@ -57,7 +58,7 @@ object MyESUtil {
     def closeClient(client: JestClient): Unit = {
         if (client != null) {
             try {
-                client.shutdownClient()
+                closeClient(client)
             } catch {
                 case e: Throwable => e.printStackTrace()
             }

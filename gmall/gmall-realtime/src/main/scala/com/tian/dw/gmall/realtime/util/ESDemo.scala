@@ -1,6 +1,6 @@
 package com.tian.dw.gmall.realtime.util
 
-import com.tian.dw.gmall.realtime.util.MyESUtil.closeClient
+import com.tian.gmall.common.util.MyESUtil.closeClient
 import io.searchbox.client.{JestClient, JestClientFactory}
 import io.searchbox.client.config.HttpClientConfig
 import io.searchbox.core.Index

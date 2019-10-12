@@ -14,11 +14,11 @@ import com.tian.dw.gmall.mock.util.{LogUploader, RandomNumUtil, RandomOptions}
  */
 object JsonMock {
 
-    val startupNum = 100000 // 生成的启动日志的记录数
-    val eventNum = 200000 // 生成的事件日志的记录数
+    val startupNum: Int = 100000 // 生成的启动日志的记录数
+    val eventNum: Int = 200000 // 生成的事件日志的记录数
 
     // 操作系统的分布
-    val osOpts = RandomOptions(("ios", 3), ("android", 7))
+    val osOpts: RandomOptions[String] = RandomOptions(("ios", 3), ("android", 7))
 
     // 日志开始时间
     var startDate: Date = _
@@ -26,7 +26,7 @@ object JsonMock {
     var endDate: Date = _
 
     // 地理位置分布
-    val areaOpts = RandomOptions(
+    val areaOpts: RandomOptions[String] = RandomOptions(
         ("beijing", 20), ("shanghai", 20), ("guangdong", 20),
         ("hebei", 5), ("heilongjiang", 5), ("shandong", 5),
         ("tianjin", 5), ("guizhou", 5), ("shangxi", 5),
@@ -67,8 +67,8 @@ object JsonMock {
         `area` string COMMENT '城市'
         `channel` string COMMENT '渠道'
          */
-        val mid: String = "mid_" + RandomNumUtil.randomInt(1, 8)
-        val uid: String = "" + RandomNumUtil.randomInt(1, 3)
+        val mid: String = "mid_" + RandomNumUtil.randomInt(1, 3)
+        val uid: String = "" + RandomNumUtil.randomInt(1, 8)
         val os: String = osOpts.getRandomOption()
         val appId: String = this.appId
         val area: String = areaOpts.getRandomOption()

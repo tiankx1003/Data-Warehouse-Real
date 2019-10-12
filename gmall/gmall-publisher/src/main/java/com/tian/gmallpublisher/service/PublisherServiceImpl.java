@@ -16,7 +16,7 @@ import java.util.Map;
  * @date 2019/10/9 10:41
  */
 @Service
-public class PublisherServiceImp implements PublisherService {
+public class PublisherServiceImpl implements PublisherService {
     /*自动注入 DauMapper 对象*/
     @Autowired
     DauMapper dauMapper;

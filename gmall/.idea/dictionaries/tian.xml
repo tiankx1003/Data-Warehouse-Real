@@ -1,20 +1,36 @@
 <component name="ProjectDictionaryState">
   <dictionary name="tian">
     <words>
+      <w>aggs</w>
       <w>appid</w>
       <w>applog</w>
+      <w>baidu</w>
       <w>bigdata</w>
+      <w>daycount</w>
       <w>djava</w>
       <w>gmall</w>
       <w>gmalllogger</w>
       <w>gmallpublisher</w>
+      <w>groupby</w>
       <w>guangdong</w>
+      <w>guizhou</w>
+      <w>hebei</w>
+      <w>heilongjiang</w>
+      <w>huawei</w>
       <w>jedis</w>
       <w>logdate</w>
       <w>loghour</w>
+      <w>metastore</w>
       <w>rowdata</w>
+      <w>shandong</w>
+      <w>shangxi</w>
+      <w>sichuan</w>
+      <w>tencent</w>
       <w>tian</w>
       <w>uids</w>
+      <w>wandoujia</w>
+      <w>xiaomi</w>
+      <w>xinjiang</w>
     </words>
   </dictionary>
 </component>
