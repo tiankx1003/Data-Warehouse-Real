@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.{GetMapping, RequestParam, RestCo
  */
 @RestController
 class PublisherController2 {
-    @Autowired private[controller] val publisherService: PublisherService2
+    @Autowired val publisherService: PublisherService2 = null
 
     /*
     接口: http://localhost:8070/sale_detail?date=2019-05-20&&startpage=1&&size=5&&keyword=手机小米

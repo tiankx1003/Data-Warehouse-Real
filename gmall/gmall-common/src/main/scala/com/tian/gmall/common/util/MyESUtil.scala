@@ -58,7 +58,7 @@ object MyESUtil {
     def closeClient(client: JestClient): Unit = {
         if (client != null) {
             try {
-                closeClient(client)
+                client.shutdownClient()
             } catch {
                 case e: Throwable => e.printStackTrace()
             }

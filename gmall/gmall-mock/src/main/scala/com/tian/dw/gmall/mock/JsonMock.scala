@@ -34,25 +34,26 @@ object JsonMock {
     )
 
     // appId
-    val appId = "gmall"
+    val appId: String = "gmall"
 
     // app 的版本分布
-    val versionOpts = RandomOptions(
+    val versionOpts: RandomOptions[String] = RandomOptions(
         ("1.2.0", 50), ("1.1.2", 15),
         ("1.1.3", 30), ("1.1.1", 5))
 
     // 用户行为的分布(事件分布)
-    val eventOpts = RandomOptions(
+    val eventOpts: RandomOptions[String] = RandomOptions(
         ("addFavor", 10), ("addComment", 30),
-        ("addCart", 20), ("clickItem", 5), ("coupon", 70))
+        //TODO clickItem从5改成更小的数增大预警概率
+        ("addCart", 20), ("clickItem", 2), ("coupon", 70))
 
     // app 分发渠道分布
-    val channelOpts = RandomOptions(
+    val channelOpts: RandomOptions[String] = RandomOptions(
         ("xiaomi", 10), ("huawei", 20), ("wandoujia", 30),
         ("360", 20), ("tencent", 20), ("baidu", 10), ("website", 10))
 
     // 生成模拟数据的时候是否结束退出
-    val quitOpts = RandomOptions((true, 5), (false, 95))
+    val quitOpts: RandomOptions[Boolean] = RandomOptions((true, 5), (false, 95))
 
     // 模拟出来一条启动日志
     def initOneStartupLog(): String = {
@@ -67,15 +68,16 @@ object JsonMock {
         `area` string COMMENT '城市'
         `channel` string COMMENT '渠道'
          */
+        //TODO mid个数小于uid个数更容易产生预警
         val mid: String = "mid_" + RandomNumUtil.randomInt(1, 3)
-        val uid: String = "" + RandomNumUtil.randomInt(1, 8)
+        val uid: String = "" + RandomNumUtil.randomInt(1, 800)
         val os: String = osOpts.getRandomOption()
         val appId: String = this.appId
         val area: String = areaOpts.getRandomOption()
         val version: String = versionOpts.getRandomOption()
         val channel: String = channelOpts.getRandomOption()
 
-        val obj = new JSONObject()
+        val obj: JSONObject = new JSONObject()
         obj.put("logType", "startup")
         obj.put("mid", mid)
         obj.put("uid", uid)
@@ -89,7 +91,7 @@ object JsonMock {
     }
 
     // 模拟出来一条事件日志  参数: json 格式的启动日志
-    def initOneEventLog(startupLogJson: String) = {
+    def initOneEventLog(startupLogJson: String): String = {
         /*
         `logType` string   COMMENT '日志类型',
         `mid` string COMMENT '设备唯一标识',
@@ -105,7 +107,7 @@ object JsonMock {
          */
         val startupLogObj: JSONObject = JSON.parseObject(startupLogJson)
 
-        val eventLogObj = new JSONObject()
+        val eventLogObj: JSONObject = new JSONObject()
         eventLogObj.put("logType", "event")
         eventLogObj.put("mid", startupLogObj.getString("mid"))
         eventLogObj.put("uid", startupLogObj.getString("uid"))
