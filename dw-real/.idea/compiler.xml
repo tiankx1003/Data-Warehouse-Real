@@ -6,16 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mock" />
-        <module name="common" />
-        <module name="logger" />
+        <module name="dw2es" />
         <module name="realtime" />
+        <module name="common" />
+        <module name="publisher" />
+        <module name="mock" />
+        <module name="logger" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="logger" options="" />
+      <module name="publisher" options="" />
     </option>
   </component>
 </project>

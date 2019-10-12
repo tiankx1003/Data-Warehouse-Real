@@ -2,7 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b24d6d6-9888-4043-9f8d-96a06b642bfa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/scala/com/tian/common/bean/User.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/src/main/scala/com/tian/common/utils/MyESUtil.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dw2es/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dw2es/src/main/resources/hive-site.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dw2es/src/main/scala/com/tian/dw2es/app/SaleDetailApp.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dw2es/src/main/scala/com/tian/dw2es/bean/SaleDetailDayCount.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/com/tian/publisher/PublisherApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/com/tian/publisher/controller/PublisherController1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/java/com/tian/publisher/service/PublisherService1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/bean/Opt.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/controller/PublisherController2.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher/service/PublisherService2.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Script/jpsall.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Script/jpsall.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Script/xcall.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Script/xcall.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Script/xsync.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../Script/xsync.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/tian.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/tian.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/realtime/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/realtime/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +59,14 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Scala Class" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -51,9 +92,15 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/publisher/src/main/scala/com/tian/publisher" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/mock/src/main/scala/com/tian/mock/utils" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -98,6 +145,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PublisherApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="publisher" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tian.publisher.PublisherApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -112,6 +166,7 @@
       <workItem from="1570795754205" duration="1714000" />
       <workItem from="1570797522319" duration="1431000" />
       <workItem from="1570840393183" duration="164000" />
+      <workItem from="1570880137998" duration="4886000" />
     </task>
     <servers />
   </component>
