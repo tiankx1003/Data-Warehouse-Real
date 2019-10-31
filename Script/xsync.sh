@@ -1,5 +1,4 @@
 #!/bin/bash
-
 pcount=$#
 
 if ((pcount==0)); then
